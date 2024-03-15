@@ -122,3 +122,31 @@ Below are the entities derived from the provided requirements along with an ER d
 ```
 
 This ER diagram illustrates the relationships between the entities. Each product can be associated with one or more categories and subcategories. Additionally, a product can have stock information, multiple images, and reviews.
+
+
+### UseCases
+
+Here are several use cases that can be implemented based on the provided requirements:
+
+1. **User Authentication and Authorization**:
+   - Implement user authentication and authorization to control access to the product catalog system. Different user roles (e.g., admin, customer) can have different permissions, such as adding/editing products, managing categories, or viewing product details.
+
+2. **Order Management**:
+   - Allow users to place orders for products listed in the catalog. Implement features such as adding products to a shopping cart, checkout process, order tracking, and order history.
+
+3. **Inventory Management**:
+   - Extend the stock management functionality to include inventory management features. Track the quantity of each product available in stock, receive notifications for low stock levels, and manage inventory replenishment processes.
+
+4. **Product Recommendations**:
+   - Implement recommendation algorithms to suggest relevant products to users based on their browsing history, purchase history, or similar products. This can improve user engagement and increase sales by promoting personalized product recommendations.
+
+5. **Product Reviews and Ratings**:
+   - Enhance the review functionality to allow users to rate products and provide detailed reviews. Implement features such as sorting products based on ratings, displaying average ratings for products, and allowing users to filter products based on ratings.
+
+6. **Advanced Filtering and Search**:
+   - Enhance the filtering and search functionality to support advanced filtering options and faceted search. Allow users to filter products based on multiple criteria simultaneously, such as price range, brand, size, color, and other attributes.
+
+7. **Promotions and Discounts**:
+   - Implement promotional campaigns and discount codes to incentivize purchases. Allow users to apply discount codes during checkout and display promotional banners or offers on the product pages.
+
+By implementing these additional use cases, the product catalog system can become more comprehensive, engaging, and valuable for both the business and its users.
