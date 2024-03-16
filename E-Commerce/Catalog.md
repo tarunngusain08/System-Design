@@ -152,9 +152,9 @@ Here are several use cases that can be implemented based on the provided require
 By implementing these additional use cases, the product catalog system can become more comprehensive, engaging, and valuable for both the business and its users.
 
 
-### APIs
+### API Endpoints
 
-To create API endpoints for the provided use cases, we'll define a RESTful API with endpoints for user authentication, order management, inventory management, product recommendations, product reviews and ratings, advanced filtering and search, and promotions/discounts. Here's a basic outline of the API endpoints for each use case:
+Here's a basic outline of the API endpoints for each use case:
 
 1. **User Authentication and Authorization**:
    - POST /api/auth/login: Endpoint for user authentication. Accepts username/email and password, returns authentication token.
