@@ -36,3 +36,59 @@
    - Users should have access to their order history, which includes details of past purchases, order statuses, and order tracking information.
    - Users should be able to view and track the status of their current orders, including estimated delivery dates and shipment tracking numbers.
 
+
+## Entities
+Based on the provided functional requirements, we can identify the following entities and their relationships in the shopping cart system:
+
+1. **User**:
+   - Attributes: UserID, Username, Password, Email, Role
+   - Relationships:
+     - One user can have multiple sessions (1-to-many).
+     - One user can have multiple orders (1-to-many).
+     - Users can be associated with different roles (e.g., regular user, administrator) (many-to-one).
+
+2. **Session**:
+   - Attributes: SessionID, UserID, StartTime, LastActivityTime
+   - Relationships:
+     - One session is associated with one user (many-to-one).
+     - One session can have multiple cart items (1-to-many).
+
+3. **CartItem**:
+   - Attributes: CartItemID, SessionID, ItemID, Quantity
+   - Relationships:
+     - One cart item belongs to one session (many-to-one).
+     - One cart item is associated with one item from the catalog (many-to-one).
+
+4. **Item**:
+   - Attributes: ItemID, Name, Description, Price, Availability
+   - Relationships:
+     - One item can be added to multiple cart items (1-to-many).
+     - One item can have multiple inventory records (1-to-many).
+
+5. **Inventory**:
+   - Attributes: InventoryID, ItemID, Quantity
+   - Relationships:
+     - One inventory record is associated with one item (many-to-one).
+
+6. **Order**:
+   - Attributes: OrderID, UserID, OrderDate, Status, TotalAmount
+   - Relationships:
+     - One order belongs to one user (many-to-one).
+     - One order can have multiple order items (1-to-many).
+
+7. **OrderItem**:
+   - Attributes: OrderItemID, OrderID, ItemID, Quantity, UnitPrice
+   - Relationships:
+     - One order item belongs to one order (many-to-one).
+     - One order item is associated with one item from the catalog (many-to-one).
+
+8. **ShippingInformation**:
+   - Attributes: ShippingInfoID, UserID, Address, City, State, ZipCode, Country
+   - Relationships:
+     - One shipping information record belongs to one user (many-to-one).
+
+9. **PaymentMethod**:
+   - Attributes: PaymentMethodID, UserID, PaymentType, CardNumber, ExpiryDate, CVV
+   - Relationships:
+     - One payment method record belongs to one user (many-to-one).
+
