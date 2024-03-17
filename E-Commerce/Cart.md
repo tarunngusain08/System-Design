@@ -92,3 +92,38 @@ Based on the provided functional requirements, we can identify the following ent
    - Relationships:
      - One payment method record belongs to one user (many-to-one).
 
+## ER Diagram
+
+      +------------+             +------------+            +------------+          +------------+
+      |    User    |             |   Session  |            |   CartItem |          |    Item    |
+      +------------+             +------------+            +------------+          +------------+
+      | UserID     |----<|-------| SessionID  |            | CartItemID |          | ItemID     |
+      | Username   |             | UserID     |            | SessionID  |-----<|----| Name       |
+      | Password   |             | StartTime  |            | ItemID     |          | Description|
+      | Email      |             | LastActivityTime      | Quantity   |          | Price      |
+      | Role       |             +------------+            +------------+          | Availability |
+      +------------+                                                              +------------+
+          |                                                                                |
+          | 1                                                                             1|
+          |                                                                                |
+      +------------+                                                              +------------+
+      |  Inventory |                                                              |   Order    |
+      +------------+                                                              +------------+
+      | InventoryID|--------<|----------------------------------------------------| OrderID    |
+      | ItemID     |                                                              | UserID     |
+      | Quantity   |                                                              | OrderDate  |
+      +------------+                                                              | Status     |
+          |                                                                       | TotalAmount|
+          | 1                                                                     1|
+          |                                                                       |
+      +------------+                                                              +------------+
+      | OrderItem  |                                                              |ShippingInfo|
+      +------------+                                                              +------------+
+      | OrderItemID|--------<|----------------------------------------------------|ShippingInfoID|
+      | OrderID    |                                                              | UserID       |
+      | ItemID     |                                                              | Address      |
+      | Quantity   |                                                              | City         |
+      | UnitPrice  |                                                              | State        |
+      +------------+                                                              | ZipCode      |
+                                                                                   | Country      |
+                                                                                   +-------------+
