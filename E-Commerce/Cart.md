@@ -127,3 +127,40 @@ Based on the provided functional requirements, we can identify the following ent
       +------------+                                                              | ZipCode      |
                                                                                    | Country      |
                                                                                    +-------------+
+
+
+### API Endpoints:
+
+1. **User Authentication and Authorization**:
+   - `/api/auth/login` (POST): Endpoint to authenticate and log in users.
+   - `/api/auth/logout` (POST): Endpoint to log out users.
+   - `/api/auth/register` (POST): Endpoint to register new users.
+   - `/api/users/{userID}` (GET, PUT, DELETE): Endpoint to get, update, or delete user information.
+
+2. **Session Management**:
+   - No specific API endpoints needed as session management can be handled internally by the server.
+
+3. **Cart Operations**:
+   - `/api/cart/items` (GET, POST): Endpoint to get all cart items or add a new item to the cart.
+   - `/api/cart/items/{itemID}` (GET, PUT, DELETE): Endpoint to get, update, or delete a specific item from the cart.
+   - `/api/cart/clear` (DELETE): Endpoint to clear the entire shopping cart.
+
+4. **Item Management**:
+   - `/api/items` (GET, POST): Endpoint to get all items or add a new item to the catalog.
+   - `/api/items/{itemID}` (GET, PUT, DELETE): Endpoint to get, update, or delete a specific item from the catalog.
+
+5. **Inventory Management**:
+   - No specific API endpoints needed as inventory management can be handled internally by the server.
+
+6. **Checkout Process**:
+   - `/api/checkout` (POST): Endpoint to initiate the checkout process.
+   - `/api/orders/{orderID}` (GET): Endpoint to get details of a specific order.
+   - `/api/orders` (GET): Endpoint to get a list of all orders.
+
+7. **Guest Checkout**:
+   - `/api/guest/checkout` (POST): Endpoint to initiate guest checkout process.
+
+8. **Order History**:
+   - `/api/orders/{userID}` (GET): Endpoint to get order history for a specific user.
+
+### Concurrency and Parallelism Scope:
