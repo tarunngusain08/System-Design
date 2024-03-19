@@ -163,4 +163,38 @@ Based on the provided functional requirements, we can identify the following ent
 8. **Order History**:
    - `/api/orders/{userID}` (GET): Endpoint to get order history for a specific user.
 
+
 ### Concurrency and Parallelism Scope:
+
+1. **User Authentication and Authorization**:
+   - **Endpoints**: `/api/auth/login`, `/api/auth/logout`, `/api/auth/register`, `/api/users/{userID}`
+   - **Concurrency Technique**: Implement concurrent request handling using goroutines to handle multiple login, logout, registration, or user information retrieval requests simultaneously. Use techniques like connection pooling to efficiently manage database connections and handle concurrent database queries.
+
+2. **Cart Operations**:
+   - **Endpoints**: `/api/cart/items`, `/api/cart/items/{itemID}`, `/api/cart/clear`
+   - **Concurrency Technique**: Utilize worker pools or channels to process cart operations concurrently. For example, when retrieving cart items, concurrently fetch item details from the database or external services to reduce response time. Use synchronization techniques like mutexes or channels to ensure data consistency and prevent race conditions when updating or clearing the shopping cart.
+
+3. **Item Management**:
+   - **Endpoints**: `/api/items`, `/api/items/{itemID}`
+   - **Concurrency Technique**: Implement concurrent item retrieval and modification operations using goroutines. Use caching mechanisms to cache frequently accessed item data to reduce database load and improve response times. Employ optimistic concurrency control or versioning to handle concurrent updates to item information safely.
+
+4. **Checkout Process**:
+   - **Endpoints**: `/api/checkout`, `/api/orders/{orderID}`, `/api/orders`
+   - **Concurrency Technique**: Utilize message queues and background workers to handle checkout process asynchronously. For example, upon successful checkout, enqueue order processing tasks to be handled by background workers. Use distributed locks or database transactions to ensure consistency and prevent overselling of items during concurrent checkout operations.
+
+5. **Guest Checkout**:
+   - **Endpoints**: `/api/guest/checkout`
+   - **Concurrency Technique**: Implement parallel processing of guest checkout requests using worker pools or asynchronous task queues. Utilize caching to store temporary guest checkout data to reduce database load and improve performance. Use idempotent operations and retry mechanisms to handle concurrent guest checkout requests safely.
+
+6. **Order History**:
+   - **Endpoints**: `/api/orders/{userID}`
+   - **Concurrency Technique**: Implement efficient indexing and query optimization techniques in the database to handle concurrent order history retrieval requests. Utilize connection pooling to manage database connections effectively. Consider implementing read replicas or sharding for horizontal scalability and improved concurrency handling.
+
+
+### Coding Practices for Concurrency:
+- Use goroutines in Go to execute concurrent tasks concurrently.
+- Utilize channels for communication and synchronization between goroutines.
+- Implement worker pools to manage concurrent tasks efficiently.
+- Use synchronization primitives such as mutexes, semaphores, or atomic operations to coordinate access to shared resources.
+- Employ techniques like connection pooling, caching, and batching to optimize database interactions and reduce contention.
+- Implement error handling and retries to handle transient failures and ensure robustness in concurrent environments.
