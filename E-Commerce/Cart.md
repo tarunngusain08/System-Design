@@ -32,10 +32,6 @@
 7. **Guest Checkout**:
    - The system should support guest checkout for users who do not have an account. Guest users should be able to add items to their shopping cart and complete the checkout process by providing their shipping and payment information.
 
-8. **Order History**:
-   - Users should have access to their order history, which includes details of past purchases, order statuses, and order tracking information.
-   - Users should be able to view and track the status of their current orders, including estimated delivery dates and shipment tracking numbers.
-
 
 ## Entities
 Based on the provided functional requirements, we can identify the following entities and their relationships in the shopping cart system:
@@ -160,9 +156,6 @@ Based on the provided functional requirements, we can identify the following ent
 7. **Guest Checkout**:
    - `/api/guest/checkout` (POST): Endpoint to initiate guest checkout process.
 
-8. **Order History**:
-   - `/api/orders/{userID}` (GET): Endpoint to get order history for a specific user.
-
 
 ### Concurrency and Parallelism Scope:
 
@@ -185,10 +178,6 @@ Based on the provided functional requirements, we can identify the following ent
 5. **Guest Checkout**:
    - **Endpoints**: `/api/guest/checkout`
    - **Concurrency Technique**: Implement parallel processing of guest checkout requests using worker pools or asynchronous task queues. Utilize caching to store temporary guest checkout data to reduce database load and improve performance. Use idempotent operations and retry mechanisms to handle concurrent guest checkout requests safely.
-
-6. **Order History**:
-   - **Endpoints**: `/api/orders/{userID}`
-   - **Concurrency Technique**: Implement efficient indexing and query optimization techniques in the database to handle concurrent order history retrieval requests. Utilize connection pooling to manage database connections effectively. Consider implementing read replicas or sharding for horizontal scalability and improved concurrency handling.
 
 
 ### Coding Practices for Concurrency:
