@@ -47,3 +47,48 @@
 4. **Order Fulfillment System**:
    - Processes orders for shipping or delivery.
    - Generates shipping labels, tracks shipments, and updates order status.
+
+
+## Entities:
+
+1. **Customer**:
+   - Attributes: ID, name, contact information, shipping address.
+
+2. **Product**:
+   - Attributes: ID, name, description, price, quantity in stock.
+
+3. **Order**:
+   - Attributes: ID, customer ID, order date, total amount, status (e.g., pending, shipped, delivered).
+
+4. **OrderItem**:
+   - Attributes: ID, order ID, product ID, quantity.
+
+5. **Payment**:
+   - Attributes: ID, order ID, amount, payment method, transaction status, timestamp.
+
+6. **AdminUser**:
+   - Attributes: ID, username, password.
+
+
+## Relationships:
+
+1. **Customer-Order**: One-to-Many
+   - Each customer can place multiple orders.
+   - Each order belongs to exactly one customer.
+
+2. **Product-OrderItem**: One-to-Many
+   - Each product can be included in multiple order items.
+   - Each order item corresponds to exactly one product.
+
+3. **Order-OrderItem**: One-to-Many
+   - Each order can have multiple order items.
+   - Each order item belongs to exactly one order.
+
+4. **Order-Payment**: One-to-One
+   - Each order can have one associated payment.
+   - Each payment corresponds to exactly one order.
+
+5. **AdminUser-Order**: One-to-Many
+   - Each admin user can manage multiple orders.
+   - Each order is managed by exactly one admin user.
+
