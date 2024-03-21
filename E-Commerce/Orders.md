@@ -126,3 +126,37 @@
    - `POST /auth/login`: Authenticate a user (admin or customer) and obtain an access token.
    - `POST /auth/logout`: Invalidate the current access token and log out the user.
 
+
+## Concurrency and Parallelism Scope:
+
+1. **Order Placement**:
+   - **Endpoints**: `/orders`
+   - **Concurrency Scope**: Implement concurrency to handle multiple order placement requests simultaneously. Use goroutines to process each order request independently, allowing efficient utilization of system resources and reducing response time. Implement techniques like connection pooling to manage database connections efficiently and handle concurrent database transactions.
+
+2. **Inventory Management**:
+   - **Endpoints**: `/products`, `/products/{product_id}`
+   - **Concurrency Scope**: Utilize concurrency to handle concurrent requests for retrieving, adding, updating, and deleting products from the inventory. Employ goroutines to process inventory management operations concurrently, ensuring timely updates and accurate inventory tracking. Implement caching mechanisms to reduce database load and improve performance during concurrent product retrieval operations.
+
+3. **Payment Handling**:
+   - **Endpoints**: `/payments`, `/payments/{payment_id}`
+   - **Concurrency Scope**: Implement parallel processing to handle payment transactions efficiently. Use asynchronous processing or background workers to process payment requests concurrently, allowing the system to handle multiple payment transactions simultaneously. Employ techniques like message queues to distribute payment processing tasks across multiple workers and ensure scalability and fault tolerance.
+
+4. **Order Fulfillment**:
+   - **Endpoints**: `/orders/{order_id}/fulfillment`, `/orders/{order_id}/tracking`
+   - **Concurrency Scope**: Utilize parallelism to handle order fulfillment and tracking operations concurrently. Implement asynchronous processing or background tasks to handle order fulfillment tasks such as shipping label generation and tracking information updates concurrently with other system operations. Employ distributed locking or optimistic concurrency control to ensure consistency when updating order status and tracking information.
+
+5. **Admin Dashboard**:
+   - **Endpoints**: `/admin/orders`, `/admin/orders/{order_id}`, `/admin/inventory`, `/admin/inventory/{product_id}`
+   - **Concurrency Scope**: Implement concurrency to support concurrent administrative tasks such as viewing orders and managing inventory. Use goroutines to handle administrative requests concurrently, ensuring responsiveness and scalability of the admin dashboard. Employ caching mechanisms to cache frequently accessed administrative data and reduce database load during concurrent administrative operations.
+
+6. **Security and Authentication**:
+   - **Endpoints**: `/auth/login`, `/auth/logout`
+   - **Concurrency Scope**: Implement concurrent request handling for user authentication and authorization. Use goroutines to handle authentication and authorization requests concurrently, allowing the system to process multiple login and logout requests simultaneously. Employ techniques like rate limiting and request throttling to prevent abuse and ensure system stability under heavy load.
+
+### Coding Practices for Concurrency:
+- Utilize goroutines to execute concurrent tasks efficiently.
+- Implement asynchronous processing or background workers to handle long-running tasks asynchronously.
+- Employ techniques like connection pooling and caching to optimize database interactions and reduce contention.
+- Utilize message queues or task queues to distribute workload and handle tasks concurrently.
+- Implement synchronization mechanisms such as mutexes or channels to coordinate access to shared resources and prevent data races.
+- Use error handling and retry mechanisms to handle transient failures and ensure robustness in concurrent environments.
