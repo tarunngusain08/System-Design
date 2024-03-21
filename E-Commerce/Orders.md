@@ -92,3 +92,37 @@
    - Each admin user can manage multiple orders.
    - Each order is managed by exactly one admin user.
 
+
+## API Endpoints:
+
+1. **Order Placement**:
+   - `POST /orders`: Place a new order by providing customer details and selected products.
+
+2. **Inventory Management**:
+   - `GET /products`: Retrieve a list of available products with their quantities.
+   - `POST /products`: Add a new product to the inventory.
+   - `PUT /products/{product_id}`: Update the quantity of a specific product in the inventory.
+   - `DELETE /products/{product_id}`: Remove a product from the inventory.
+
+3. **Payment Handling**:
+   - `POST /payments`: Process a payment transaction using the provided payment details.
+   - `GET /payments/{payment_id}`: Retrieve details of a specific payment transaction.
+
+4. **Order Fulfillment**:
+   - `PUT /orders/{order_id}/fulfillment`: Initiate order fulfillment process (e.g., shipping, delivery).
+   - `GET /orders/{order_id}/tracking`: Retrieve shipping tracking information for a specific order.
+
+5. **Admin Dashboard**:
+   - `GET /admin/orders`: Retrieve a list of orders for administrative purposes.
+   - `GET /admin/orders/{order_id}`: Retrieve details of a specific order.
+   - `PUT /admin/orders/{order_id}`: Update the status or details of a specific order.
+   - `GET /admin/inventory`: Retrieve a list of products in the inventory.
+   - `GET /admin/inventory/{product_id}`: Retrieve details of a specific product in the inventory.
+   - `POST /admin/inventory`: Add a new product to the inventory.
+   - `PUT /admin/inventory/{product_id}`: Update the details of a specific product in the inventory.
+   - `DELETE /admin/inventory/{product_id}`: Remove a product from the inventory.
+
+6. **Security and Authentication**:
+   - `POST /auth/login`: Authenticate a user (admin or customer) and obtain an access token.
+   - `POST /auth/logout`: Invalidate the current access token and log out the user.
+
