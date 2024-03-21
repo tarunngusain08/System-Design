@@ -88,6 +88,7 @@ Based on the provided functional requirements, we can identify the following ent
    - Relationships:
      - One payment method record belongs to one user (many-to-one).
 
+
 ## ER Diagram
 
       +------------+             +------------+            +------------+          +------------+
