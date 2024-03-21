@@ -153,7 +153,8 @@
    - **Endpoints**: `/auth/login`, `/auth/logout`
    - **Concurrency Scope**: Implement concurrent request handling for user authentication and authorization. Use goroutines to handle authentication and authorization requests concurrently, allowing the system to process multiple login and logout requests simultaneously. Employ techniques like rate limiting and request throttling to prevent abuse and ensure system stability under heavy load.
 
-### Coding Practices for Concurrency:
+
+## Coding Practices for Concurrency:
 - Utilize goroutines to execute concurrent tasks efficiently.
 - Implement asynchronous processing or background workers to handle long-running tasks asynchronously.
 - Employ techniques like connection pooling and caching to optimize database interactions and reduce contention.
