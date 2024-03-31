@@ -34,6 +34,7 @@
    - Ensure end-to-end encryption for message transmission.
    - Implement mechanisms to prevent unauthorized access to messages.
 
+
 ## Entities:
 
 1. **User**:
@@ -52,6 +53,7 @@
    - Attributes: GroupID, Name, CreatorID, CreationTime
    - Relationships: One-to-Many with User (Participants)
 
+
 ## Class Diagram:
 
 ```
@@ -67,6 +69,7 @@
                                   |  Group  |
                                   +---------+
 ```
+
 
 ## Components and Responsibilities:
 
@@ -85,6 +88,7 @@
 4. **Notification Component**:
    - Generates and dispatches notifications for new messages, group invites, or other events.
    - Supports various notification channels such as email, push notifications, or desktop alerts.
+
 
 ## API Endpoints:
 
@@ -112,6 +116,7 @@
    - `/api/notifications` (GET): Get notifications for the current user.
    - `/api/notifications/{notificationID}/markAsRead` (POST): Mark a notification as read.
 
+
 ## Concurrency and Parallelism Scope:
 
 1. **Session Management**:
@@ -124,6 +129,7 @@
 3. **Notification Component**:
    - Send notifications asynchronously to avoid blocking user interactions.
    - Use distributed systems for scalable notification delivery across multiple channels.
+
 
 ## Coding Practices for Concurrency:
 
