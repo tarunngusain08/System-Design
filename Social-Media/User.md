@@ -51,4 +51,3 @@ Based on the provided functional requirements, we can identify the following ent
    - `/api/users/{userID}/connections` (GET): Endpoint to get a list of user connections.
    - `/api/users/{userID}/connections/add` (POST): Endpoint to add a new connection for the user.
    - `/api/users/{userID}/connections/remove` (POST): Endpoint to remove a connection for the user.
-
