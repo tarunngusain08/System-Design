@@ -3,7 +3,7 @@
 Design a system for filtering transactions based on various criteria such as customer ID, start and end duration, etc., we can follow a layered architecture comprising multiple components. Below is a discussion of the Low-Level Design (LLD) for such a system:
 
 ## Components:
-
+ 
 1. **API Layer**:
    - Responsible for handling incoming requests from users and delegating them to the appropriate components.
    - Exposes RESTful endpoints for clients to query transactions based on specified criteria.
