@@ -48,5 +48,3 @@ The system needs to process high volumes of data in real time, consider a range 
 2. **Weather and Traffic Data**: Uses third-party APIs and local caching for weather updates to determine surge multipliers in adverse conditions.
 3. **Notifications and Alerts**: Uses Kafka or similar message brokers for pushing surge alerts to users and drivers in real-time.
 4. **Data Persistence**: Records historical data for analytics and future trend predictions. 
-
-This system offers a balance between efficient resource use and user satisfaction by dynamically managing pricing in response to real-world conditions.
