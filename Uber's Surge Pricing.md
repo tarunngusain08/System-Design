@@ -47,4 +47,8 @@ The system needs to process high volumes of data in real time, consider a range 
 1. **Ride Requests and Driver Availability**: Tracks requests and drivers across different regions, and adjusts prices accordingly.
 2. **Weather and Traffic Data**: Uses third-party APIs and local caching for weather updates to determine surge multipliers in adverse conditions.
 3. **Notifications and Alerts**: Uses Kafka or similar message brokers for pushing surge alerts to users and drivers in real-time.
-4. **Data Persistence**: Records historical data for analytics and future trend predictions. 
+4. **Data Persistence**: Records historical data for analytics and future trend predictions.
+
+
+<img width="972" alt="Screenshot 2024-11-12 at 3 28 38 PM" src="https://github.com/user-attachments/assets/15e75799-50a2-4a86-be13-9f0d93e3a4ba">
+
