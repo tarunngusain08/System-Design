@@ -1,99 +1,106 @@
-# Typeahead
+# TypeAhead
 
 ## Overview
 
-This repository outlines the design and implementation details of a scalable, high-performance Typeahead System. The system provides real-time suggestions to users based on their input, ensuring low latency and high availability.
+This TypeAhead system provides real-time keyword suggestions based on user input. The design supports high scalability, low latency, and fault tolerance to handle high query volumes efficiently. 
 
 ---
 
 ## Functional Requirements (FRs)
 
-1. **Keyword Suggestions**:
-   - Provide up to 10 suggestions based on user input.
-
-2. **Ranking**:
-   - Rank suggestions based on trend and popularity.
-
-3. **Personalized Suggestions**:
-   - Tailor results using user preferences or historical data.
-
-4. **Categorization**:
-   - Group suggestions by predefined categories for better context.
+1. **Suggest 10 keywords** based on user input.
+2. **Rank suggestions** by trends and popularity.
+3. **Categorize suggestions** for better user experience.
+4. **Personalized recommendations** tailored to individual users.
 
 ---
 
 ## Non-Functional Requirements (NFRs)
 
-1. **High Availability & Eventual Consistency**:
-   - Ensure service continuity even under partial failures.
-   
-2. **Low Latency**:
-   - Target response times under 100ms.
-
-3. **Graceful Degradation**:
-   - Maintain core functionality during partial outages.
-
-4. **Resilience & Failover**:
-   - Implement redundancy for fault tolerance.
-
-5. **Reliability**:
-   - Ensure consistent and accurate results.
-
-6. **Caching**:
-   - Employ distributed caching to reduce latency.
+1. **High Availability**: Ensures continuous service with eventual consistency.
+2. **Low Latency**: Provides responses in under 100ms.
+3. **Graceful Degradation**: Maintains functionality under partial failures.
+4. **Resilient Architecture**: Implements robust failover mechanisms.
+5. **Caching**: Reduces read latency for frequently accessed data.
 
 ---
 
-## Scalability Considerations
+## System Scalability
 
-### Query Load
-- **100K concurrent queries/sec**:
-  - Requires 100MB/s bandwidth for suggestions.
-  - Generates 50MB/s logs (~5TB/day).
-
-### Keyword Storage
-- **10 Billion Keywords (~100GB)**:
-  - Sharded based on the first letter (26 shards).
-  - Uniform shard size: ~4GB/shard.
-
-### Replication Strategy
-- Hotspot shards (~80% traffic) replicated 4 times.
-- Remaining shards (~20% traffic) replicated 3 times.
-- Total storage: ~400GB after replication.
-
-### Caching
-- Cache 5% of the data (~5.5GB).
-- With 3 replicas, total cache size: ~16.5GB (~20GB).
-- Target hit ratio: 70%.
-
-### Data Structure Optimization
-- **Trie**:
-  - Reduces storage by 25%, saving ~100GB.
-  - Optimized total storage: ~300GB.
+### Data Growth Projections
+- 1.825 trillion queries over 5 years (~2TB).
+- Keyword deduplication reduces storage to ~400GB.
+- **Sharding Strategy**:
+  - **26 shards** for uniform data distribution.
+  - Hotspot shards handle 80% of traffic.  
+  - Replication factor: **4 for hotspots**, **3 for others**.
+  - Total storage: **~1.45TB**.
 
 ---
 
-## System Design Components
+## Storage Optimization
 
-1. **Sharded Database**:
-   - Partition keywords to ensure even load distribution.
-   
-2. **Distributed Caching**:
-   - Leverage Redis for caching frequently accessed keywords.
+1. **Trie Data Structure**:
+   - Space-efficient with 30% savings.
+   - Reduces total storage to ~1TB.
+   - Real-world savings range from 20-50% depending on prefix overlaps.
 
-3. **Replication**:
-   - Ensure data redundancy and availability.
+2. **Caching**:
+   - Caches 5% of keywords (~80GB).
+   - With a replication factor of 3, total cache size: **~250GB**.
+   - Ensures a **>70% cache hit ratio**.
 
-4. **Efficient Data Structures**:
-   - Use tries to optimize keyword storage and retrieval.
-
-5. **Resiliency**:
-   - Autoscaling, load balancing, and failover mechanisms.
+3. **Indexing Overhead**:
+   - Adds ~300GB (20%) for fast keyword retrieval.
 
 ---
 
 ## Performance Metrics
 
-- **Latency**: <100ms for global queries.
-- **Hit Ratio**: >70% for cached queries.
-- **Throughput**: 100K queries/sec.
+1. **Network Bandwidth**:
+   - ~100MB/s for 100K queries per second (10 suggestions/query).
+
+2. **Logging**:
+   - ~100MB/s, resulting in ~10TB of logs daily.
+   - **Archival Strategy**: Implement periodic log compression to optimize storage.
+
+---
+
+## Trie Implementation Analysis
+
+- **Node Adjacency**:
+  - 250 bytes per node for adjacency lists.
+  - Hotspots (10 frequently used characters): **~3PB**.
+  - Non-hotspots (16 less-used characters): **~800TB**.
+  - Total storage: **~3.8PB**.
+
+---
+
+## Key Components
+
+1. **Sharded Database**:
+   - Uniform and skewed traffic distribution handling.
+   - High read throughput supported by replication.
+
+2. **Trie-Based Storage**:
+   - Efficient prefix-based keyword storage.
+   - Reduces space requirements significantly.
+
+3. **Distributed Cache**:
+   - Optimized for frequently accessed data.
+   - High cache hit ratios to lower response times.
+
+4. **Failover Mechanisms**:
+   - Automatic recovery during failures.
+   - Ensures minimal downtime.
+
+---
+
+## Future Considerations
+
+1. **Trie Optimizations**:
+   - Explore compact data structures like Patricia tries.
+2. **Dynamic Caching**:
+   - Implement adaptive caching policies to optimize memory use.
+3. **Traffic Assumptions**:
+   - Continuously validate and fine-tune hotspot assumptions based on real usage data.
