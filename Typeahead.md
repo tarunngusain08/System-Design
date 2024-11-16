@@ -104,3 +104,5 @@ This TypeAhead system provides real-time keyword suggestions based on user input
    - Implement adaptive caching policies to optimize memory use.
 3. **Traffic Assumptions**:
    - Continuously validate and fine-tune hotspot assumptions based on real usage data.
+
+<img width="648" alt="Screenshot 2024-11-16 at 3 41 41 PM" src="https://github.com/user-attachments/assets/bf3dc04f-1f25-4edd-8f64-da56e2ea636c">
