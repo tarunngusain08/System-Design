@@ -1,5 +1,7 @@
 # TypeAhead
 
+<img width="648" alt="Screenshot 2024-11-16 at 3 41 41 PM" src="https://github.com/user-attachments/assets/bf3dc04f-1f25-4edd-8f64-da56e2ea636c">
+
 ## Overview
 
 This TypeAhead system provides real-time keyword suggestions based on user input. The design supports high scalability, low latency, and fault tolerance to handle high query volumes efficiently. 
@@ -105,4 +107,3 @@ This TypeAhead system provides real-time keyword suggestions based on user input
 3. **Traffic Assumptions**:
    - Continuously validate and fine-tune hotspot assumptions based on real usage data.
 
-<img width="648" alt="Screenshot 2024-11-16 at 3 41 41 PM" src="https://github.com/user-attachments/assets/bf3dc04f-1f25-4edd-8f64-da56e2ea636c">
