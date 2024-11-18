@@ -1,5 +1,7 @@
 # Uber Surge Pricing System
 
+<img width="972" alt="Screenshot 2024-11-12 at 3 28 38 PM" src="https://github.com/user-attachments/assets/15e75799-50a2-4a86-be13-9f0d93e3a4ba">
+
 ## Problem Overview
 
 In a large-scale ride-hailing platform like Uber, millions of riders and drivers interact simultaneously across multiple regions. To ensure an optimal and balanced service, the platform must dynamically adjust pricing based on real-time supply and demand. This adjustment is known as **surge pricing**.
@@ -50,5 +52,4 @@ The system needs to process high volumes of data in real time, consider a range 
 4. **Data Persistence**: Records historical data for analytics and future trend predictions.
 
 
-<img width="972" alt="Screenshot 2024-11-12 at 3 28 38 PM" src="https://github.com/user-attachments/assets/15e75799-50a2-4a86-be13-9f0d93e3a4ba">
 
