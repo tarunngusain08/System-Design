@@ -4,7 +4,6 @@
 
 This document outlines the high-level design (HLD) for **Zepto**, a highly scalable and efficient e-commerce platform, focusing on fast grocery deliveries. It provides a breakdown of the functional and non-functional requirements, architecture, scaling considerations, and services used in the system.
 
----
 
 ## **Functional Requirements (FRs)**
 
