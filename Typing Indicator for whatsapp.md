@@ -2,6 +2,8 @@
 
 <img width="1331" alt="Screenshot 2024-11-26 at 9 50 29 PM" src="https://github.com/user-attachments/assets/4812239b-5136-4905-97c2-ed57bde74041">
 
+
+
 This project implements a scalable and resilient **Typing Indicator** system for WhatsApp, ensuring a seamless and low-latency experience for users while adhering to system performance and availability requirements.
 
 ---
