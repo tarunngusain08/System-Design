@@ -76,9 +76,3 @@ This project implements a scalable and resilient **Typing Indicator** system for
 2. Typing states are stored in **Redis** for quick retrieval.
 3. WebSocket Manager interacts with backend services for chat, notifications, and stickers.
 4. Ephemeral typing states are cleared once a user stops typing or disconnects.
-
----
-
-### **Contact**
-
-For questions or suggestions, feel free to reach out!
