@@ -1,5 +1,7 @@
 # Ecommerce Flash Sale
 
+<img width="1509" alt="Screenshot 2024-12-05 at 10 09 18 PM" src="https://github.com/user-attachments/assets/c3b3b910-0211-462b-9d27-b07cc70432b5">
+
 ### **Overview**
 This system is designed to handle large-scale e-commerce flash sales, such as Black Friday events, where millions of users attempt to purchase limited inventory simultaneously. The goal is to ensure system reliability, prevent over-selling, and maintain a seamless user experience under extreme load conditions.
 
