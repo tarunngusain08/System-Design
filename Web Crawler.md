@@ -1,6 +1,6 @@
 # Web Crawler Design
 
-<img width="1512" alt="Screenshot 2024-12-11 at 3 17 01 PM" src="https://github.com/user-attachments/assets/23a6cf9c-d46f-4ae3-9153-6b09883ad7c8" />
+<img width="1037" alt="Screenshot 2024-12-15 at 2 32 31 PM" src="https://github.com/user-attachments/assets/7d1f52d7-3ebf-4ba0-af12-77df8028cb0e" />
 
 ## Overview
 This document outlines the design and architecture of a distributed web crawler that efficiently fetches, processes, and stores metadata and HTML content from billions of web pages. The crawler is designed with scalability, fault tolerance, and politeness policies in mind.
