@@ -1,6 +1,8 @@
 # Reels - High-Level Design (HLD)
 
-## Requirements - <img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" />
+## Requirements - 
+
+<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" />
 
 ## Functional Requirements (FRs)
 
