@@ -2,7 +2,8 @@
 
 ## Requirements - 
 
-<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" /> 
+<img width="319" alt="Screenshot 2024-12-24 at 9 21 01 PM" src="https://github.com/user-attachments/assets/a9ee59b2-897f-40a6-8f32-1f016668a278" />
+
 <img width="1207" alt="Screenshot 2024-12-24 at 8 51 10 PM" src="https://github.com/user-attachments/assets/eec73743-e51b-40da-bdc7-b46304ac5500" />
 <img width="1253" alt="Screenshot 2024-12-24 at 8 51 32 PM" src="https://github.com/user-attachments/assets/5c685480-d12c-4c13-a52c-90b3d5dca0dd" />
 
@@ -51,16 +52,16 @@
 2. **Watch-to-Upload Ratio:**
     - Maintain a 1:1000 ratio, i.e., 1 upload for every 1000 watches.
 3. **Daily Video Uploads:**
-    - Handle 100,000 video uploads daily.
+    - Handle 1M video uploads daily.
         - Average video size: 100MB.
-        - Total data generated: 10TB/day.
+        - Total data generated: 100TBs/day.
 4. **Watch Time:**
     - Average watch time: 12 minutes per user per day.
         - Total watch time: 1.2 billion minutes (~200 million hours).
 5. **Bandwidth:**
-    - Data served: ~1PB/day.
-    - Network bandwidth: ~10Pbps.
-        - Requires ~1,000 servers with 10Tbps bandwidth.
+    - Data served: ~100 PBs/day.
+    - Network bandwidth: ~10Tbps.
+        - Requires ~1,000 servers with 10Gbps bandwidth.
 6. **Peak Traffic Estimation:**
     - Peak upload traffic: 15-20 videos per user per day.
     - Total peak traffic: 2 billion videos/day.
