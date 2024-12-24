@@ -2,7 +2,8 @@
 
 ## Requirements - 
 
-<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" />
+<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" /> <img width="1207" alt="Screenshot 2024-12-24 at 8 51 10 PM" src="https://github.com/user-attachments/assets/eec73743-e51b-40da-bdc7-b46304ac5500" />
+
 
 ## Functional Requirements (FRs)
 
