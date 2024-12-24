@@ -139,5 +139,3 @@
    - For global users, replicate hot video chunks across regions using secondary CDNs to reduce latency and ensure high availability.  
 
 ---
-
-This approach further strengthens your design, ensuring that it’s robust, scalable, and user-friendly. Let me know if you'd like me to expand on specific parts! 🚀
