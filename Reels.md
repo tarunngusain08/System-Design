@@ -2,7 +2,9 @@
 
 ## Requirements - 
 
-<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" /> <img width="1207" alt="Screenshot 2024-12-24 at 8 51 10 PM" src="https://github.com/user-attachments/assets/eec73743-e51b-40da-bdc7-b46304ac5500" />
+<img width="337" alt="Screenshot 2024-12-23 at 9 57 45 PM" src="https://github.com/user-attachments/assets/4b7e920c-03b6-4bd3-bc4c-88dfcdfaabe1" /> 
+<img width="1207" alt="Screenshot 2024-12-24 at 8 51 10 PM" src="https://github.com/user-attachments/assets/eec73743-e51b-40da-bdc7-b46304ac5500" />
+<img width="1253" alt="Screenshot 2024-12-24 at 8 51 32 PM" src="https://github.com/user-attachments/assets/5c685480-d12c-4c13-a52c-90b3d5dca0dd" />
 
 
 ## Functional Requirements (FRs)
