@@ -3,6 +3,8 @@
 ## Problem Statement
 Design a system to deliver live video content with minimal latency to millions of concurrent viewers. The platform must provide a seamless and interactive experience for viewers while ensuring scalability and reliability.
 
+<img width="1059" alt="Screenshot 2025-01-07 at 9 49 00 PM" src="https://github.com/user-attachments/assets/4c43cdc7-e8fb-412a-8389-15835d82c8e5" />
+
 ---
 
 ## Functional Requirements (FRs)
