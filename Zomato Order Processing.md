@@ -1,5 +1,7 @@
 # Zomato Order Processing System
 
+<img width="1361" alt="Screenshot 2025-01-20 at 7 15 52 PM" src="https://github.com/user-attachments/assets/21d7ffea-be4d-4a62-bee5-ef85bf4fed4c" />
+
 ## **Requirements**
 ### **Functional Requirements**
 1. Customers can place an order within a 5 km radius.
