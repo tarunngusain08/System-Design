@@ -3,17 +3,14 @@
 ## **Requirements**
 ### **Functional Requirements**
 1. Customers can place an order within a 5 km radius.
-2. Riders can accept/reject orders; rejected orders are reassigned to other riders.
-3. Customers can update their order (e.g., delivery address, time) or cancel within specified timeframes:
+2. Customers can update their order (e.g., delivery address, time) or cancel within specified timeframes:
    - **< 10 min**: 70% refund.
    - **< 30 min**: 40% refund.
    - **> 30 min**: No cancellation/refund allowed.
-4. Restaurants can accept/reject orders; rejections notify customers.
-5. Orders maintain states: **Order Placed**, **Order in Processing**, **Order Completed**.
-6. Notifications are sent to customers for all order state changes.
-7. Order history is retained for customers for 6 months.
-8. Payment handling includes refunds and vendor payment management.
-9. Restaurant ratings are maintained and updated.
+3. Orders maintain states: **Order Placed**, **Order in Processing**, **Order Completed**.
+4. Notifications are sent to customers for all order state changes.
+5. Order history is retained for customers for 6 months.
+6. Payment handling includes refunds and vendor payment management.
 
 ### **Non-Functional Requirements**
 1. High availability and fault tolerance.
@@ -32,8 +29,8 @@
    - 1 year: ~100 GB of orders data.
    - 5 years: ~400 GB.
 5. **Caching**:
-   - 10% caching per request (~50 bytes/order).
-   - Cache invalidation with a 1-day TTL.
+   - 10% caching per request (~100 bytes/order).
+   - Cache invalidation with a 1-week TTL.
 
 ---
 
@@ -61,13 +58,7 @@
   - Vendor Pools: Abstracts third-party services for SMS, push, and email.
   - Monitoring: Tracks notification delivery and retry attempts.
 
-### **4. Analytics and Logging Services**
-- **Purpose**: Collects and processes order, payment, and user behavior data for reporting and monitoring.
-- **Key Technologies**:
-  - Kafka: Streams raw data to analytics pipelines.
-  - ELK Stack: For centralized logging and queryable dashboards.
-
-### **5. Rate Limiter**
+### **4. Rate Limiter**
 - **Purpose**: Prevents abuse by limiting API calls per user or key.
 - **Key Technology**: Redis-based token bucket algorithm.
 
